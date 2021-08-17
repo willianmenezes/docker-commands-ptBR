@@ -22,6 +22,8 @@ docker container run -ti --mount type=volume,src=dbdados,dst=/data --mount type=
 
 docker container create <nome da imagem> -> Cria um container mas não o coloca em execução.
 
+docker container create --name <nome do container> <nome da imagem> -> Cria um container mas não o coloca em execução e seta um nome pra esse container.
+
 docker container attach <id do container> -> Conecta em um container em execução.
 
 docker container pause <id do container> -> Pausa um container em execução.
@@ -50,7 +52,7 @@ docker container update --cpus 0.2 -> Atualiza um container em execução limita
 
 docker container update -m 128M <nome da imagem> ->  Atualiza um container em execução limitando a sua memória.
 
-## Volumes
+# Volumes
 
 docker volume create <nome do volume> -> Cria um volume.
 
@@ -60,7 +62,13 @@ docker volume rm <nome do volume> -> Remove um volume.
 
 docker volume rm -f <nome do volume> -> Remove um volume.
 
-## Utilidades
+docker volume inspect giropops -> Inspeciona um volume, mostrando os seus detalhes.
+
+docker volume prune -> Delete os volumes que não estão sendo utilizados.
+
+
+
+# Utilidades
 
 CTRL + p + q -> Sai do container mas o mantem em execução.
 
