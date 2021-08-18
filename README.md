@@ -66,6 +66,10 @@ docker volume inspect giropops -> Inspeciona um volume, mostrando os seus detalh
 
 docker volume prune -> Delete os volumes que não estão sendo utilizados.
 
+# Imagens
+
+ docker image build -t <tag da imagem, nome>:<versão da imagem> . -> Builda uma imagem a partir de um Dockerfile. O Dockerfile estã no mesmo diretório "."
+
 
 
 # Utilidades
@@ -73,3 +77,5 @@ docker volume prune -> Delete os volumes que não estão sendo utilizados.
 CTRL + p + q -> Sai do container mas o mantem em execução.
 
 CTRL + D / exit -> Sai do container e mata a sua execução.
+
+ps -ef -> Mostra todos os processos no linux de forma detalhada.
