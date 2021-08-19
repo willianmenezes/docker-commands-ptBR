@@ -70,7 +70,29 @@ docker volume prune -> Delete os volumes que não estão sendo utilizados.
 
  docker image build -t <tag da imagem, nome>:<versão da imagem> . -> Builda uma imagem a partir de um Dockerfile. O Dockerfile estã no mesmo diretório "."
 
+# Dockerfile
 
+FROM -> imagem base
+
+RUN -> Comando a ser executado no build/criação do container
+
+ENV -> Seta variáveis de ambiente para o container
+
+COPY -> Adicionar um recurso em determinado local do container (arquivos, arquivos compactados e etc)
+
+COPY -> Mesma função do COPY porem com alguns recursos a mais, como adicionar sites e já adicionar os arquivos compactados descompactados.
+
+USER -> usuário a ser utilizado pelo container
+
+WORKDIR -> Diretório onde o container vai ser iniciado
+
+VOLUME -> Diretorio onde vai ser criado o volume
+
+EXPOSE -> Portas que vão ser expostas pelo container
+
+ENTRYPOINT -> Principal processo do container, ele que define se o container esta Up ou Down
+
+CMD -> Comandos/Argumentos a serem passados para o container, atenção ao usar ele com o ENTRYPOINT
 
 # Utilidades
 
