@@ -69,6 +69,8 @@ docker volume prune -> Delete os volumes que não estão sendo utilizados.
 # Imagens
 
  docker image build -t <tag da imagem, nome>:<versão da imagem> . -> Builda uma imagem a partir de um Dockerfile. O Dockerfile estã no mesmo diretório "."
+ 
+ docker image build --no-cache -t <tag da imagem, nome>:<versao da imagem> . -> Builda uma imagem a partir de um Docker file, sem considerar o cache das imagens.
 
 # Dockerfile
 
@@ -90,9 +92,11 @@ VOLUME -> Diretorio onde vai ser criado o volume
 
 EXPOSE -> Portas que vão ser expostas pelo container
 
-ENTRYPOINT -> Principal processo do container, ele que define se o container esta Up ou Down
+ENTRYPOINT -> Principal processo do container, ele que define se o container esta Up ou Down, serve para executar alguma coisa depois que o container subiu. ["bash"] ou bash
 
 CMD -> Comandos/Argumentos a serem passados para o container, atenção ao usar ele com o ENTRYPOINT
+ 
+ OBS: Quando utilizar o ENTRYPOINT e o CMD no mesmo dockerfile o CMD é utilizado apenas para passar parametros.
 
 # Utilidades
 
@@ -101,3 +105,7 @@ CTRL + p + q -> Sai do container mas o mantem em execução.
 CTRL + D / exit -> Sai do container e mata a sua execução.
 
 ps -ef -> Mostra todos os processos no linux de forma detalhada.
+ 
+# Pensamentos importantes
+ 
+- Um container nasceu para morrer, não 
