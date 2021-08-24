@@ -76,7 +76,7 @@
 
 **RUN** -> Comando a ser executado no build/criação do container
 
-**ENV** -> Seta variáveis de ambiente para o container
+**ENV** -> Seta variáveis de ambiente para o container. Ex: ENV teste opt/app -> WORKDIR Dolar{teste} COPY . Dolar{teste}
 
 **COPY** -> Adicionar um recurso em determinado local do container (arquivos, arquivos compactados e etc)
 
