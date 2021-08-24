@@ -2,6 +2,8 @@
 
 **docker container ls** -> Lista os containers em execução.
 
+**docker container ls -q** -> Lista os IDs dos container ativos.
+
 **docker container ls -a** -> Lista todos os containers.
 
 **docker container run -d <nome da imagem>** -> Executa o container em backgroud.
@@ -70,6 +72,8 @@
 
 **docker image build -t <tag da imagem, nome>:<versão da imagem>** . -> Builda uma imagem a partir de um Dockerfile. O Dockerfile estã no mesmo diretório "."
 
+**docker image tag <id da imagem> <nome da imagem>** -> Adiciona um nome a uma imagem.
+
 # Dockerfile
 
 **FROM** -> imagem base
@@ -78,9 +82,9 @@
 
 **ENV** -> Seta variáveis de ambiente para o container. Ex: ENV teste opt/app -> WORKDIR Dolar{teste} COPY . Dolar{teste}
 
-**COPY** -> Adicionar um recurso em determinado local do container (arquivos, arquivos compactados e etc)
+**COPY** -> Adicionar um recurso em determinado local do container (arquivos, arquivos compactados, diretórios e etc)
 
-**ADD** -> Mesma função do COPY porem com alguns recursos a mais, como adicionar sites e já adicionar os arquivos compactados descompactados.
+**ADD** -> Mesma função do COPY porem com alguns recursos a mais, como adicionar sites, arquivos remotos e já adicionar os arquivos compactados descompactados.
 
 **USER** -> usuário a ser utilizado pelo container
 
@@ -93,6 +97,8 @@
 **ENTRYPOINT** -> Principal processo do container, ele que define se o container esta Up ou Down
 
 **CMD** -> Comandos/Argumentos a serem passados para o container, atenção ao usar ele com o ENTRYPOINT
+
+**ARG** -> Cria uma variável como argumento, e no momento do build da imagem pode-se alterar o valor desse argumento.
 
 # Utilidades
 
