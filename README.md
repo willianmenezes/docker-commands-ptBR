@@ -74,6 +74,10 @@
 
 **docker image tag <id da imagem> <nome da imagem>** -> Adiciona um nome a uma imagem.
 
+**docker push <nomde do usuário / nome da imagem>** -> Envia uma imagem para o dockerhub.
+
+**docker pull <nome da imagem>** -> Baixa uma imagem do dockerhub.
+
 # Dockerfile
 
 **FROM** -> imagem base
@@ -101,6 +105,16 @@
 **ARG** -> Cria uma variável como argumento, e no momento do build da imagem pode-se alterar o valor desse argumento.
   
 **LABEL** -> Adiciona metadados a imagem como versão, descrição e fabricante;
+
+# Registry
+
+**docker login** -> Realiza o login no repositorio especificado.
+
+**docker container run -d -p 5000:5000 --restart=always --name registry registry:2** -> Inicializa um container registro local, para subir imagens em um registry que nao seja o dockerhub.
+
+**curl localhost:5000/v2/_catalog** -> Visualiza as imagens no registry
+
+**curl localhost:5000/v2/ubuntu-teste/tags/list** -> Mostra as versões da imagem no registry.
 
 # Utilidades
 
