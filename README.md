@@ -99,6 +99,8 @@
 **CMD** -> Comandos/Argumentos a serem passados para o container, atenção ao usar ele com o ENTRYPOINT
 
 **ARG** -> Cria uma variável como argumento, e no momento do build da imagem pode-se alterar o valor desse argumento.
+  
+**LABEL** -> Adiciona metadados a imagem como versão, descrição e fabricante;
 
 # Utilidades
 
