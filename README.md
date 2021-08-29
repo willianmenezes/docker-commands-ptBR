@@ -141,6 +141,14 @@
 **docker-machine start linuxtips** -> Reinicia/inicia uma VM
   
 **docker-machine rm linuxtips** -> Remove uma VM
+  
+#Docker Swarm
+  
+**docker swarm init** -> Inicia um cluster swarm
+  
+**docker swarm init --advertise-addr** -> Inicia um cluster swarm quando se tem mais de uma interface de rede
+  
+**docker swarm join-token <token worker>** -> Adicionado um host como node worker no cluster swarm.
 
 # Utilidades
 
