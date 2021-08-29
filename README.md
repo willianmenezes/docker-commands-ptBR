@@ -116,7 +116,7 @@
 
 **curl localhost:5000/v2/ubuntu-teste/tags/list** -> Mostra as versões da imagem no registry.
   
-#Docker Machine
+# Docker Machine
 
 **docker-machine version** -> Verifica a versão do docker machine instalada
 
@@ -142,7 +142,7 @@
   
 **docker-machine rm linuxtips** -> Remove uma VM
   
-#Docker Swarm
+# Docker Swarm
   
 **docker swarm init** -> Inicia um cluster swarm
   
