@@ -115,6 +115,32 @@
 **curl localhost:5000/v2/_catalog** -> Visualiza as imagens no registry
 
 **curl localhost:5000/v2/ubuntu-teste/tags/list** -> Mostra as versões da imagem no registry.
+  
+#Docker Machine
+
+**docker-machine version** -> Verifica a versão do docker machine instalada
+
+**docker-machine create --driver <driver> <nome da VM>** -> Cria uma maquina virtual com o driver desejado
+
+**docker-machine ls** -> Lista as maquinas virtuais criadas
+  
+**docker-machine env <nome da VM>** -> Verifica as variáveis de ambiente da VM
+  
+**eval "$(docker-machine env <Nome da VM>)"** -> Adiciona as variaveis de ambiente da VM do client, para que os comando locais sejam executados na VM.
+
+**eval $(docker-machine env -u)** -> Remove as váriaveis de ambiente do client.
+  
+**docker-machine ip linuxtips** -> Verifica o IP de uma VM
+
+**docker-machine ssh linuxtips** -> Conecta na VM por SSH
+
+**docker-machine inspect linuxtips** -> Inspeciona todos os dados de uma VM
+  
+**docker-machine stop linuxtips** -> Pausa uma VM
+
+**docker-machine start linuxtips** -> Reinicia/inicia uma VM
+  
+**docker-machine rm linuxtips** -> Remove uma VM
 
 # Utilidades
 
