@@ -182,7 +182,7 @@
   
 **docker service rm webserver** -> Deleta um serviço.
   
-** docker network create -d overlay giropops** -> Cria uma rede do tipo overlay, para comunicação entre serviços.
+**docker network create -d overlay giropops** -> Cria uma rede do tipo overlay, para comunicação entre serviços.
   
 **docker network ls** -> Lista as redes criadas.
   
@@ -192,7 +192,7 @@
   
 **docker service scale <nomde do serviço>=5** -> Escala um serviço para a quantidade desejada.
   
-**docker service update <OPCOES> <Nome_Service> ** -> Atualiza um serviço com a opção selecionada.
+**docker service update <OPCOES> <Nome_Service>** -> Atualiza um serviço com a opção selecionada.
 
 # Utilidades
 
