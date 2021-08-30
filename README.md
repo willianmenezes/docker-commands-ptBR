@@ -149,6 +149,50 @@
 **docker swarm init --advertise-addr** -> Inicia um cluster swarm quando se tem mais de uma interface de rede
   
 **docker swarm join-token <token worker>** -> Adicionado um host como node worker no cluster swarm.
+  
+**docker swarm join-token manager** -> Adicionado um host como node manager no cluster swarm.
+  
+**docker node ls** -> Lista os nodes de um cluster swarm.
+  
+**docker node inspect <Nome do node>** -> Inspeciona e mostra todos os detalhes de um node.
+  
+**docker node promote <Nomde do node>** -> Promove um node para manager.
+  
+**ocker node demote <Nome do node>** -> Promove um node para worker.
+  
+**docker swarm leave** -> Realiza a saida de um cluster como worker.
+  
+**docker swarm leave --force** -> Realiza a saida de um cluster como manager.
+  
+**docker node rm <Nome do node>** -> Remove um node de um cluster.
+  
+**docker service create --name <nome do serviço> --replicas 5 -p 8080:80  <nomde da imagem>** -> Cria um serviço com 5 replicas de um determinado container.
+  
+**docker service create --name <nomde do serviço> --replicas 5 -p 8080:80 --mount type=volume,src=teste,dst=/app  <nome da imagem>** -> Cria um serviço com 5 replicas de um determinado container e monta os os volumes nos diretorios especificados.
+  
+**docker service create --name <nomde do serviço> --network <nomde da rede> --replicas 5 -p 8080:80 --mount type=volume,src=teste,dst=/app  <nomde da imagem>** -> Cria um serviço com 5 replicas de um determinado container, monta os os volumes nos diretorios especificados e adiciona a rede aos containers do serviço.
+  
+**docker service ls** -> Lista os serviços.
+  
+**docker service ps <nome do serviço>** -> Lista todos os containers do serviço.
+  
+**docker service inspect webserver** -> Inspeciona e mostra todos os detalhes do serviço.
+  
+**docker service logs -f <nomde do serviço>** -> Mostra todos os logs dos containers unificados pelo serviço.
+  
+**docker service rm webserver** -> Deleta um serviço.
+  
+** docker network create -d overlay giropops** -> Cria uma rede do tipo overlay, para comunicação entre serviços.
+  
+**docker network ls** -> Lista as redes criadas.
+  
+**docker network rm <nomde da rede>** Deleta uma rede.
+  
+**docker network inspect <nome da rede>** -> Inspeciona o mostra todos os detalhes de uma determinada rede.
+  
+**docker service scale <nomde do serviço>=5** -> Escala um serviço para a quantidade desejada.
+  
+**docker service update <OPCOES> <Nome_Service> ** -> Atualiza um serviço com a opção selecionada.
 
 # Utilidades
 
@@ -157,3 +201,5 @@ CTRL + p + q -> Sai do container mas o mantem em execução.
 CTRL + D / exit -> Sai do container e mata a sua execução.
 
 ps -ef -> Mostra todos os processos no linux de forma detalhada.
+  
+curl <qualquer IP de um node no cluester>:8080
